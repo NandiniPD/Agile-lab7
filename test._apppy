@@ -1,0 +1,10 @@
+import unittest
+from app import check_room_availability
+
+class TestHostelManagement(unittest.TestCase):
+    def test_check_room_availability(self):
+        self.assertEqual(check_room_availability(5), True)  # Room available
+        self.assertEqual(check_room_availability(0), False)  # No rooms available
+
+if __name__ == '__main__':
+    unittest.main()
